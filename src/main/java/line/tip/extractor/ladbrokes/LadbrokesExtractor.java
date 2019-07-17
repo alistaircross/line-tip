@@ -16,7 +16,7 @@ import static line.tip.utils.LadbrokesUtils.ROUND_STRING;
 
 public class LadbrokesExtractor implements Extractor {
 
-    public Map extractRoundsFromDocument(Document doc) {
+    public Map<Integer, AflRound> extractRoundsFromDocument(Document doc) {
         Map<Integer, AflRound> rounds = new HashMap<Integer, AflRound>();
         for (int i = 1; i < 30; i++) {
             Element roundElement = doc.getElementById(ROUND_STRING + i);

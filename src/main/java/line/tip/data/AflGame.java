@@ -1,5 +1,7 @@
 package line.tip.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class AflGame {
     private AflTeam homeTeam;
     private AflTeam awayTeam;
@@ -20,6 +22,7 @@ public class AflGame {
         this.awayTeam = awayTeam;
     }
 
+    @JsonIgnore
     public String getVsString() {
         return homeTeam.getName() + " vs " + awayTeam.getName();
     }
